@@ -9,10 +9,11 @@
 
 
 def adjust_heap(arr, i, num):
-    """ 
-    已知arr数组表示堆, arr[i + 1: ]里的子树满足最大堆，调整arr[i: ]成为最大堆
-    将根节点的值冒泡下沉到合适的位置
     """
+    已知arr数组表示堆,
+    arr[i + 1: num]里的子树满足最大堆，调整arr[i: ]成为最大堆
+    """
+    # 将根节点的值冒泡下沉到合适的位置
     while True:
         # 取最大子节点
         left = 2 * i + 1 
@@ -28,7 +29,7 @@ def adjust_heap(arr, i, num):
         # 根节点比子节点小，交换; 否则结束
         if arr[i] < arr[idx]:
             arr[i], arr[idx] = arr[idx], arr[i]
-        i = idx 
+        i = idx  
       
     
 def heap_sort(arr):
