@@ -29,7 +29,8 @@ def adjust_heap(arr, i, num):
         if arr[i] < arr[idx]:
             arr[i], arr[idx] = arr[idx], arr[i]
         i = idx 
-        
+      
+    
 def heap_sort(arr):
     """ 
     堆排序
@@ -42,6 +43,7 @@ def heap_sort(arr):
         arr[0], arr[i] = arr[i], arr[0]
         adjust_heap(arr, 0, i)
     return arr
+
 
 if __name__ == "__main__":
     arr = [2, 5, 7, 1, 0, 5]
